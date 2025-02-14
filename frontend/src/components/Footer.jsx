@@ -6,7 +6,11 @@ const Footer = () => {
       <hr className="mt-10 border border-x-gray-700" />
       <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-10 text-sm">
         <div>
-          <img src={assets.logo} className="mb-5 w-32" alt="" />
+          <img
+            src="https://singhaniya0411.github.io/MERN-Ecommerce-Project/logo.png"
+            className="mb-5 w-32"
+            alt=""
+          />
           <p className="w-full md:w-2/3 text-gray-600">
             Redefining fashion with style and elegance. Discover your unique
             look with us!

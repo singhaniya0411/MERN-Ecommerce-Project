@@ -84,7 +84,7 @@ const Collection = () => {
           FILTER
           <img
             className={`h-3 sm:hidden ${showFilter ? "" : "-rotate-90"}`}
-            src={assets.dropdown}
+            src="https://singhaniya0411.github.io/MERN-Ecommerce-Project/dropdown_img.png"
             alt=""
           />
         </p>

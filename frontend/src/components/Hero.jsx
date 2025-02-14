@@ -22,7 +22,11 @@ const Hero = () => {
       </div>
 
       {/* hERO rIGHT SIDE */}
-      <img src={assets.hero_img} className="w-full sm:w-1/2" alt="" />
+      <img
+        src="https://singhaniya0411.github.io/MERN-Ecommerce-Project/hero_img.jpg"
+        className="w-full sm:w-1/2"
+        alt=""
+      />
     </div>
   );
 };

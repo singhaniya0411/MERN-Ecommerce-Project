@@ -233,7 +233,11 @@ const PlaceOrder = () => {
                     method === "stripe" ? "bg-green-400" : " "
                   } `}
                 ></p>
-                <img className="h-5 mx-4" src={assets.stripe_logo} alt="" />
+                <img
+                  className="h-5 mx-4"
+                  src="https://singhaniya0411.github.io/MERN-Ecommerce-Project/stripe_logo.png"
+                  alt=""
+                />
               </div>
               {/* <div
                 onClick={() => setMethod("razorpay")}
@@ -270,7 +274,11 @@ const PlaceOrder = () => {
                     method === "UPI" ? "bg-green-400" : " "
                   } `}
                 ></p>
-                <img className="h-4 mx-4 " src={assets.upi_logo} alt="" />
+                <img
+                  className="h-4 mx-4 "
+                  src="https://singhaniya0411.github.io/MERN-Ecommerce-Project/upi_logo.jpg"
+                  alt=""
+                />
               </div>
               <div
                 // onClick={() => setMethod("VISA")}
@@ -281,7 +289,11 @@ const PlaceOrder = () => {
                     method === "VISA" ? "bg-green-400" : " "
                   } `}
                 ></p>
-                <img className="h-4 mx-4 " src={assets.visa_logo} alt="" />
+                <img
+                  className="h-4 mx-4 "
+                  src="https://singhaniya0411.github.io/MERN-Ecommerce-Project/visa.jpg"
+                  alt=""
+                />
               </div>
             </div>
 

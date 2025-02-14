@@ -5,7 +5,7 @@ const Policy = () => {
     <div className="flex sm:flex-row justify-around gap-12 sm:gap-2 text-center py-20 text-xs sm:text-sm md:text-base text-gray-700">
       <div className="w-64">
         <img
-          src={assets.exchange_icon}
+          src="https://singhaniya0411.github.io/MERN-Ecommerce-Project/exchange_icon.png"
           className="w-12 m-auto mb-5"
           alt="exchange"
         />
@@ -14,7 +14,7 @@ const Policy = () => {
       </div>
       <div className="w-64">
         <img
-          src={assets.support_icon}
+          src="https://singhaniya0411.github.io/MERN-Ecommerce-Project/support_icon.png"
           className="w-12 m-auto mb-5"
           alt="exchange"
         />
@@ -26,7 +26,7 @@ const Policy = () => {
       </div>
       <div className="w-64">
         <img
-          src={assets.quality_icon}
+          src="https://singhaniya0411.github.io/MERN-Ecommerce-Project/quality_img.png"
           className="w-12 m-auto mb-5"
           alt="exchange"
         />

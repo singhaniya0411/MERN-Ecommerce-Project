@@ -26,7 +26,7 @@ const Navbar = () => {
     >
       <img
         onClick={() => navigate("/")}
-        src={assets.logo}
+        src="https://singhaniya0411.github.io/MERN-Ecommerce-Project/logo.png"
         className="w-36"
         alt="logo"
       />
@@ -60,7 +60,7 @@ const Navbar = () => {
           <img
             onClick={() => (token ? null : navigate("/login"))}
             className="w-5 cursor-pointer"
-            src={assets.profile_icon}
+            src="https://singhaniya0411.github.io/MERN-Ecommerce-Project/profile_icon.jpeg"
             alt="profile"
           />
 
@@ -83,7 +83,11 @@ const Navbar = () => {
         </div>
 
         <Link to="/cart" className=" relative">
-          <img src={assets.cart_icon} className="w-5 min-w-5" alt="cart" />
+          <img
+            src="https://singhaniya0411.github.io/MERN-Ecommerce-Project/cart_img.png"
+            className="w-5 min-w-5"
+            alt="cart"
+          />
 
           <p className="absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[10px] text-sm">
             {getCartCount()}

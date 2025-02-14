@@ -12,7 +12,7 @@ const About = () => {
       <div className="my-10 flex flex-col md:flex-row gap-16">
         <img
           className="w-full md:max-w-[450px]"
-          src={assets.about_img}
+          src="https://singhaniya0411.github.io/MERN-Ecommerce-Project/about_img.png"
           alt=""
         />
         <div className="flex flex-col justify-center gap-6 md:w-2/4">

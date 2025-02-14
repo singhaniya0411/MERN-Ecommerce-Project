@@ -34,7 +34,7 @@ const SearchBar = () => {
       <img
         onClick={() => setShowSearch(false)}
         className="inline w-5 cursor-pointer"
-        src={assets.cross_img}
+        src="https://singhaniya0411.github.io/MERN-Ecommerce-Project/cross_img.webp"
         alt="cross"
       />
     </div>

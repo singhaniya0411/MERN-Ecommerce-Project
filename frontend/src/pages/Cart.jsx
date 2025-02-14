@@ -85,7 +85,7 @@ const Cart = () => {
               <img
                 onClick={() => updateQuantity(item._id, item.size, 0)}
                 className="w-4 mr-4 sm:w-5 cursor-pointer"
-                src={assets.bin_img}
+                src="https://singhaniya0411.github.io/MERN-Ecommerce-Project/bin_img.svg"
                 alt=""
               />
             </div>
