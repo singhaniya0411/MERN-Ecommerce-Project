@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import { assets } from "../assets/assets";
 import { Link, NavLink } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import { RiMenuLine } from "react-icons/ri";
