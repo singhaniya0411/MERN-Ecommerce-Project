@@ -69,7 +69,7 @@ const PlaceOrder = () => {
       switch (method) {
         case "cod":
           const response = await axios.post(
-            "http://localhost:4000/api/order/place",
+            `${backendUrl}/api/order/place`,
             orderData,
             { headers: { token } }
           );
@@ -83,7 +83,7 @@ const PlaceOrder = () => {
           break;
         case "stripe":
           const responseStripe = await axios.post(
-            "http://localhost:4000/api/order/stripe",
+            `${backendUrl}/api/order/stripe`,
             orderData,
             { headers: { token } }
           );

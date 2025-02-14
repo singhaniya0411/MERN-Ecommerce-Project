@@ -3,8 +3,10 @@ import { assets } from "../assets/assets";
 import axios from "axios";
 import { backendUrl } from "../App";
 import { toast } from "react-toastify";
+import { useContext } from "react";
 
 const Add = ({ token }) => {
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
   const [image1, setImage1] = useState(false);
   const [image2, setImage2] = useState(false);
   const [image3, setImage3] = useState(false);
@@ -38,7 +40,7 @@ const Add = ({ token }) => {
       image4 && formData.append("image4", image4);
 
       const response = await axios.post(
-        "http://localhost:4000/api/product/add",
+        `${backendUrl}/api/product/add`,
         formData,
         { headers: { token } }
       );

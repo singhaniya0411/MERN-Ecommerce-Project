@@ -14,7 +14,7 @@ const Orders = () => {
       }
 
       const response = await axios.post(
-        "http://localhost:4000/api/order/userorders",
+        `${backendUrl}/api/order/userorders`,
         {},
         { headers: { token } }
       );
