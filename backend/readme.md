@@ -1,3 +1,5 @@
+Key takeways in website
+
 cors = allow frontend to access backend
 
 dotenv = using environment variables
