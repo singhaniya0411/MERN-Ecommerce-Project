@@ -22,7 +22,7 @@ const App = () => {
       <ToastContainer />
       <Navbar />
       <SearchBar />
-      <Routes>
+      <Routes basename="/MERN-Ecommerce-Project">
         <Route path="/" element={<Home />} />
         <Route path="/collection" element={<Collection />} />
         <Route path="/cart" element={<Cart />} />
