@@ -2,9 +2,9 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { currency } from "../App";
+import { backendUrl } from "../App";
 
 const List = ({ token }) => {
-  const backendUrl = import.meta.env.VITE_BACKEND_URL;
   const [list, setList] = useState([]);
 
   const fetchList = async () => {

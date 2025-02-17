@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { backendUrl } from "../App";
+import { backendUrl } from "../App.jsx";
 import { ToastContainer, toast } from "react-toastify";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Login = ({ setToken }) => {
   const navigate = useNavigate();
@@ -12,20 +12,19 @@ const Login = ({ setToken }) => {
   const onSubmitHandler = async (e) => {
     try {
       e.preventDefault();
-      const response = await axios.post(backendUrl + "/api/user/admin", {
+      const response = await axios.post(`${backendUrl}/api/user/admin`, {
         email,
         password,
       });
 
       if (response.data.success) {
         setToken(response.data.token);
-        navigate("/list");
         toast.success("Admin Logged In Successfully!");
+        navigate("/add");
       } else {
         toast.error(response.data.message);
       }
     } catch (error) {
-      console.log(error);
       toast.error(error.message);
     }
   };

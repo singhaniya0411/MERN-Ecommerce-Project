@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import { Route, Routes } from "react-router-dom";
 import Add from "./pages/Add";
+import { useNavigate } from "react-router-dom";
 import List from "./pages/List";
 import Orders from "./pages/Orders";
 import Login from "./components/Login";
@@ -12,12 +13,17 @@ export const backendUrl = import.meta.env.VITE_BACKEND_URL;
 export const currency = "$";
 
 const App = () => {
-  const [token, setToken] = useState(
-    localStorage.getItem("token") ? localStorage.getItem("token") : ""
-  );
+  const navigate = useNavigate();
+  const [token, setToken] = useState(localStorage.getItem("token") || "");
 
+  // Update localStorage when token changes
   useEffect(() => {
-    localStorage.setItem("token", token);
+    if (token) {
+      localStorage.setItem("token", token);
+      navigate("/add");
+    } else {
+      localStorage.removeItem("token");
+    }
   }, [token]);
   return (
     <div className="bg-gray-50 min-h-screen">

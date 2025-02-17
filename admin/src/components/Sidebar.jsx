@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { assets } from "../assets/assets";
+import { assets } from "../../public/assets/assets";
 import { FaListUl } from "react-icons/fa";
 
 const Sidebar = () => {

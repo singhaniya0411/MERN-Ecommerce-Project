@@ -3,12 +3,11 @@ import { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { assets } from "../assets/assets";
-import { currency } from "../App";
+import { assets } from "../../public/assets/assets";
+import { backendUrl, currency } from "../App";
 
 const Orders = ({ token }) => {
   const [orders, setOrders] = useState([]);
-  const backendUrl = import.meta.env.VITE_BACKEND_URL;
   const fetchAllOrders = async () => {
     if (!token) {
       return null;
