@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Add from "./pages/Add";
 import { useNavigate } from "react-router-dom";
 import List from "./pages/List";
@@ -20,7 +20,7 @@ const App = () => {
   useEffect(() => {
     if (token) {
       localStorage.setItem("token", token);
-      navigate("/MERN-Ecommerce-Project/admin/add");
+      navigate("/add");
     } else {
       localStorage.removeItem("token");
     }
@@ -38,18 +38,9 @@ const App = () => {
             <Sidebar />
             <div className="w-[70%] mx-auto ml-[max(5vw,25px)] my-8 text-gray-600 text-base">
               <Routes>
-                <Route
-                  path="/MERN-Ecommerce-Project/admin/add"
-                  element={<Add token={token} />}
-                />
-                <Route
-                  path="/MERN-Ecommerce-Project/admin/list"
-                  element={<List token={token} />}
-                />
-                <Route
-                  path="/MERN-Ecommerce-Project/admin/order"
-                  element={<Orders token={token} />}
-                />
+                <Route path="/add" element={<Add token={token} />} />
+                <Route path="/list" element={<List token={token} />} />
+                <Route path="/order" element={<Orders token={token} />} />
               </Routes>
             </div>
           </div>
