@@ -49,33 +49,53 @@ const List = ({ token }) => {
       <p className="text-xl font-semibold mb-2">All Products List</p>
       <div>
         {/* ------------- lIST TABLE TITLE */}
-        <div className="grid grid-cols-[1fr_3fr_1fr_1fr_1fr] items-center py-1 px-2 border bg-gray-100 text-sm">
-          <b>Image</b>
-          <b>Name</b>
-          <b>Category</b>
-          <b>Price</b>
-          <b className="text-center">Action</b>
+        <div className="flex justify-between py-1 px-1 gap-2 border bg-gray-100 text-xs md:text-sm">
+          <div className="w-[19%]">
+            <b>Image</b>
+          </div>
+          <div className="w-[19%]">
+            <b>Name</b>
+          </div>
+          <div className="w-[19%]">
+            <b>Category</b>
+          </div>
+          <div className="w-[19%]">
+            <b>Price</b>
+          </div>
+          <div className="text-end pr-4 w-[19%]">
+            <b>Action</b>
+          </div>
         </div>
 
         {/* -----------Product List---------- */}
         {list.map((item, index) => (
           <div
-            className="grid grid-cols-[1fr_3fr_1fr] md:grid-cols-[1fr_3fr_1fr_1fr_1fr] items-center gap-2 py-1 px-2 border text-sm"
+            className="flex justify-between items-center gap-2 py-1 px-2 border text-sm"
             key={index}
           >
-            <img className="w-12" src={item.image[0]} alt="" />
-            <p>{item.name}</p>
-            <p>{item.category}</p>
-            <p>
-              {currency}
-              {item.price}
-            </p>
-            <p
-              onClick={() => removeProduct(item._id)}
-              className="text-right md:text-center cursor-pointer text-lg"
-            >
-              X
-            </p>
+            <div className="w-[19%]">
+              <img className="w-12" src={item.image[0]} alt="" />
+            </div>
+            <div className="w-[19%]">
+              <p>{item.name}</p>
+            </div>
+            <div className="w-[19%]">
+              <p>{item.category}</p>
+            </div>
+            <div className="w-[19%]">
+              <p>
+                {currency}
+                {item.price}
+              </p>
+            </div>
+            <div className="w-[19%]">
+              <p
+                onClick={() => removeProduct(item._id)}
+                className="text-end pr-4 cursor-pointer text-[14px]"
+              >
+                X
+              </p>
+            </div>
           </div>
         ))}
       </div>

@@ -25,7 +25,7 @@ const Navbar = () => {
     font-medium"
     >
       <img
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/MERN-Ecommerce-Project")}
         src="https://singhaniya0411.github.io/MERN-Ecommerce-Project/logo.png"
         className="w-36"
         alt="logo"

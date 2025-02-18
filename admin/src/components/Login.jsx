@@ -20,7 +20,7 @@ const Login = ({ setToken }) => {
       if (response.data.success) {
         setToken(response.data.token);
         toast.success("Admin Logged In Successfully!");
-        navigate("/add");
+        navigate("/MERN-Ecommerce-Project/admin/add");
       } else {
         toast.error(response.data.message);
       }
