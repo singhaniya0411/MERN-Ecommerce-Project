@@ -81,7 +81,7 @@ const Navbar = () => {
               <div className="flex flex-col gap-2 w-36 px-5 bg-slate-100 text-gray-500 rounded">
                 <p className="cursor-pointer hover:text-black">My Profile</p>
                 <p
-                  onClick={() => navigate("/orders")}
+                  onClick={() => navigate("/MERN-Ecommerce-Project/orders")}
                   className="cursor-pointer hover:text-black"
                 >
                   Orders
@@ -94,7 +94,7 @@ const Navbar = () => {
           )}
         </div>
 
-        <Link to="/cart" className=" relative">
+        <Link to="/MERN-Ecommerce-Project/cart" className=" relative">
           <img
             src="https://singhaniya0411.github.io/MERN-Ecommerce-Project/cart_img.png"
             className="w-5 min-w-5"
