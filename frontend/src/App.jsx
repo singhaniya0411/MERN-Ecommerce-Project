@@ -19,21 +19,30 @@ import "react-toastify/dist/ReactToastify.css";
 const App = () => {
   return (
     <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
-      <Router basename="/MERN-Ecommerce-Project">
+      <Router>
         <ToastContainer />
         <Navbar />
         <SearchBar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/collection" element={<Collection />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/orders" element={<Orders />} />
-          <Route path="/placeorder" element={<PlaceOrder />} />
-          <Route path="/product/:productID" element={<Product />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/verify" element={<Verify />} />
+          <Route path="/MERN-Ecommerce-Project" element={<Home />} />
+          <Route
+            path="/MERN-Ecommerce-Project/collection"
+            element={<Collection />}
+          />
+          <Route path="/MERN-Ecommerce-Project/cart" element={<Cart />} />
+          <Route path="/MERN-Ecommerce-Project/contact" element={<Contact />} />
+          <Route path="/MERN-Ecommerce-Project/login" element={<Login />} />
+          <Route path="/MERN-Ecommerce-Project/orders" element={<Orders />} />
+          <Route
+            path="/MERN-Ecommerce-Project/placeorder"
+            element={<PlaceOrder />}
+          />
+          <Route
+            path="/MERN-Ecommerce-Project/product/:productID"
+            element={<Product />}
+          />
+          <Route path="/MERN-Ecommerce-Project/about" element={<About />} />
+          <Route path="/MERN-Ecommerce-Project/verify" element={<Verify />} />
         </Routes>
       </Router>
       <Footer />
