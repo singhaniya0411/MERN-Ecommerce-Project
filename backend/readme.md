@@ -1,4 +1,4 @@
-# 🧶 Embusshh - E-Commerce Website (Backend)
+# 🛍️ Embusshh - E-Commerce Website (Backend)
 
 **Embusshh** backend is built using the MERN stack, enabling seamless management of clothing products, user authentication, orders, and payments using Razorpay and Stripe.
 
