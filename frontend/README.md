@@ -54,8 +54,8 @@ frontend/
 
 ### 1️⃣ Clone the repository
 ```sh
-git clone https://github.com/your-username/embussshh-frontend.git
-cd embussshh-frontend
+git clone https://github.com/singhaniya0411/MERN-Ecommerce-Project.git
+cd frontend
 ```
 
 ### 2️⃣ Install dependencies
