@@ -5,7 +5,6 @@
 ## 🚀 Tech Stack
 
 - **Frontend**: React.js (Vite), Tailwind CSS
-- **State Management**: Redux Toolkit
 - **Routing**: React Router
 - **API Handling**: Axios
 - **Authentication**: JWT (JSON Web Token)
