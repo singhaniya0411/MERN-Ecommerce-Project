@@ -86,17 +86,9 @@ Your app will be available at **`http://localhost:5173/`**.
 - **User Authentication** (Login/Register)
 - **Secure Payments** using Stripe
 
-### 🔑 Admin Features:
-- **Product Management** (Add, Edit, Delete)
-- **Order Management** (View, Process, Update)
-- **User Management** (Block, Delete Users)
-- **Dashboard** with analytics and insights
-
 ## 📸 Screenshots
 
-![Home Page](screenshots/home.png)
-![Product Page](screenshots/product.png)
-![Cart Page](screenshots/cart.png)
+
 
 ## 🛠️ Deployment
 
@@ -121,7 +113,7 @@ To deploy your frontend on **Vercel** or **Netlify**:
 
 ## 📜 License
 
-This project is licensed under the **MIT License**.
+This project is licensed under the -----------
 
 ## ✨ Contributing
 
