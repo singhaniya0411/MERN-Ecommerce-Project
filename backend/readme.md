@@ -1,6 +1,6 @@
-# 🧶 Embusshh - Crochet E-Commerce Website (Backend)
+# 🧶 Embusshh - E-Commerce Website (Backend)
 
-**Embusshh** backend is built using the MERN stack, enabling seamless management of crochet products, user authentication, orders, and payments using Razorpay and Stripe.
+**Embusshh** backend is built using the MERN stack, enabling seamless management of clothing products, user authentication, orders, and payments using Razorpay and Stripe.
 
 ## 🚀 Tech Stack
 
@@ -48,8 +48,8 @@ backend/
 
 ### 1️⃣ Clone the repository
 ```sh
-git clone https://github.com/your-username/embusshh-backend.git
-cd embusshh-backend
+git clone https://github.com/singhaniya0411/MERN-Ecommerce-Project.git
+cd backend
 ```
 
 ### 2️⃣ Install dependencies
@@ -74,7 +74,7 @@ CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 
 ### 4️⃣ Run the backend server
 ```sh
-npm start
+nodemon main.js
 ```
 Your backend will run at **`http://localhost:5000/`**.
 
@@ -123,8 +123,7 @@ To deploy on **Render** or **Vercel**:
 
 ## 📜 License
 
-This project is licensed under the **MIT License**.
-
+This project is licensed under the -----------
 ## ✨ Contributing
 
 Contributions are welcome! Fork the repo and submit a pull request.
