@@ -33,6 +33,7 @@ const Login = () => {
           password,
         });
         if (response.data.success) {
+          toast.success("Logged In successfully!");
           setToken(response.data.token);
           localStorage.setItem("token", response.data.token);
         } else {

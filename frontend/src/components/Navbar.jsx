@@ -4,6 +4,7 @@ import { FaSearch } from "react-icons/fa";
 import { RiMenuLine } from "react-icons/ri";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { ShopContext } from "../context/ShopContext";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const [visible, setvisiible] = useState(false);
@@ -14,6 +15,7 @@ const Navbar = () => {
 
   const logout = async () => {
     navigate("/login");
+    toast.success("Logged Out Successfully!");
     localStorage.removeItem("token");
     setToken("");
     setCartItems({});
@@ -25,38 +27,26 @@ const Navbar = () => {
     font-medium"
     >
       <img
-        onClick={() => navigate("/MERN-Ecommerce-Project")}
+        onClick={() => navigate("/")}
         src="https://singhaniya0411.github.io/MERN-Ecommerce-Project/logo.png"
         className="w-36"
         alt="logo"
       />
 
       <ul className="hidden sm:flex gap-5 text-sm text-gray-700">
-        <NavLink
-          to="/MERN-Ecommerce-Project"
-          className="flex flex-col items-center gap-1"
-        >
+        <NavLink to="/" className="flex flex-col items-center gap-1">
           <p>HOME</p>
           <hr className="w-2/4 border-none h-[1.8px] bg-gray-700 hidden" />
         </NavLink>
-        <NavLink
-          to="/MERN-Ecommerce-Project/collection"
-          className="flex flex-col items-center gap-1"
-        >
+        <NavLink to="/collection" className="flex flex-col items-center gap-1">
           <p>COLLECTION</p>
           <hr className="w-2/4 border-none h-[1.8px] bg-gray-700 hidden" />
         </NavLink>
-        <NavLink
-          to="/MERN-Ecommerce-Project/about"
-          className="flex flex-col items-center gap-1"
-        >
+        <NavLink to="/about" className="flex flex-col items-center gap-1">
           <p>ABOUT</p>
           <hr className="w-2/4 border-none h-[1.8px] bg-gray-700 hidden" />
         </NavLink>
-        <NavLink
-          to="/MERN-Ecommerce-Project/contact"
-          className="flex flex-col items-center gap-1"
-        >
+        <NavLink to="/contact" className="flex flex-col items-center gap-1">
           <p>CONTACT</p>
           <hr className="w-2/4 border-none h-[1.8px] bg-gray-700 hidden" />
         </NavLink>
@@ -81,7 +71,7 @@ const Navbar = () => {
               <div className="flex flex-col gap-2 w-36 px-5 bg-slate-100 text-gray-500 rounded">
                 <p className="cursor-pointer hover:text-black">My Profile</p>
                 <p
-                  onClick={() => navigate("/MERN-Ecommerce-Project/orders")}
+                  onClick={() => navigate("/orders")}
                   className="cursor-pointer hover:text-black"
                 >
                   Orders
@@ -94,7 +84,7 @@ const Navbar = () => {
           )}
         </div>
 
-        <Link to="/MERN-Ecommerce-Project/cart" className=" relative">
+        <Link to="/cart" className=" relative">
           <img
             src="https://singhaniya0411.github.io/MERN-Ecommerce-Project/cart_img.png"
             className="w-5 min-w-5"

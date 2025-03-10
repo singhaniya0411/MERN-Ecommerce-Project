@@ -23,25 +23,16 @@ const App = () => {
       <Navbar />
       <SearchBar />
       <Routes>
-        <Route path="/MERN-Ecommerce-Project" element={<Home />} />
-        <Route
-          path="/MERN-Ecommerce-Project/collection"
-          element={<Collection />}
-        />
-        <Route path="/MERN-Ecommerce-Project/cart" element={<Cart />} />
-        <Route path="/MERN-Ecommerce-Project/contact" element={<Contact />} />
-        <Route path="/MERN-Ecommerce-Project/login" element={<Login />} />
-        <Route path="/MERN-Ecommerce-Project/orders" element={<Orders />} />
-        <Route
-          path="/MERN-Ecommerce-Project/placeorder"
-          element={<PlaceOrder />}
-        />
-        <Route
-          path="/MERN-Ecommerce-Project/product/:productID"
-          element={<Product />}
-        />
-        <Route path="/MERN-Ecommerce-Project/about" element={<About />} />
-        <Route path="/MERN-Ecommerce-Project/verify" element={<Verify />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/collection" element={<Collection />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/orders" element={<Orders />} />
+        <Route path="/placeorder" element={<PlaceOrder />} />
+        <Route path="/product/:productID" element={<Product />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/verify" element={<Verify />} />
       </Routes>
 
       <Footer />

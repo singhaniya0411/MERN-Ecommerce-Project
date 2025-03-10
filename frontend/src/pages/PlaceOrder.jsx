@@ -57,49 +57,49 @@ const PlaceOrder = () => {
         }
       }
 
-      // console.log(orderItems);
-
       let orderData = {
         address: formData,
         items: orderItems,
         amount: getCartAmount() + delivery_fee,
       };
 
-      switch (method) {
-        case "cod":
-          const response = await axios.post(
-            `${backendUrl}/api/order/place`,
-            orderData,
-            { headers: { token } }
-          );
-          console.log(response.data.success);
-          if (response.data.success) {
-            setCartItems({});
-            navigate("/orders");
-          } else {
-            toast.error(response.data.message);
+      if (method === "cod") {
+        const response = await axios.post(
+          `${backendUrl}/api/order/place`,
+          orderData,
+          {
+            headers: { token },
           }
-          break;
-        case "stripe":
-          const responseStripe = await axios.post(
-            `${backendUrl}/api/order/stripe`,
-            orderData,
-            { headers: { token } }
-          );
-          // console.log(responseStripe.data.success);
-          if (responseStripe.data.success) {
-            const { session_url } = responseStripe.data;
-            window.location.replace(session_url);
-          } else {
-            toast.error(responseStripe.data.message);
-          }
+        );
 
-        default:
-          break;
+        if (response.data.success) {
+          setCartItems({});
+          navigate("/orders");
+        } else {
+          toast.error(response.data.message);
+        }
+      } else if (method === "stripe") {
+        const responseStripe = await axios.post(
+          `${backendUrl}/api/order/stripe`,
+          orderData,
+          {
+            headers: { token },
+          }
+        );
+        console.log(responseStripe.data);
+
+        if (responseStripe.data.success) {
+          const { session_url } = responseStripe.data;
+          window.location.replace(session_url);
+          setCartItems({});
+          navigate("/orders");
+        } else {
+          toast.error(responseStripe.data.message);
+        }
       }
     } catch (error) {
-      console.log(error.message);
-      toast.error(error.message);
+      toast.error(error.response?.data?.message || "Something went wrong!");
+      console.log(error);
     }
   };
 

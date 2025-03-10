@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { ShopContext } from "../context/ShopContext";
 import Title from "./Title";
 
@@ -8,7 +8,15 @@ const CartTotal = () => {
   // Store subtotal value to avoid multiple function calls
   const subtotal = getCartAmount();
   const shippingFee = Number(delivery_fee) || 0;
-  const total = subtotal === 0 ? 0 : subtotal + shippingFee;
+  const total =
+    subtotal === 0
+      ? 0
+      : (parseFloat(subtotal) + parseFloat(shippingFee)).toFixed(2);
+  const formattedTotal = Number(total).toFixed(2);
+
+  useEffect(() => {
+    // console.log(subtotal);
+  }, [subtotal]);
 
   return (
     <div className="w-full">
@@ -21,7 +29,7 @@ const CartTotal = () => {
           <p>Subtotal</p>
           <p>
             {currency}
-            {subtotal}.00
+            {subtotal}
           </p>
         </div>
         <hr />
@@ -37,7 +45,7 @@ const CartTotal = () => {
           <b>Total</b>
           <b>
             {currency}
-            {total}.00
+            {formattedTotal}
           </b>
         </div>
       </div>

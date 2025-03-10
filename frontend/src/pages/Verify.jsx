@@ -15,6 +15,9 @@ const Verify = () => {
       if (!token) {
         return null;
       }
+
+      console.log(success);
+      console.log(orderId);
       const response = await axios.post(
         `${backendUrl}/api/order/verifystripe`,
         { success, orderId },
@@ -25,6 +28,9 @@ const Verify = () => {
         setCartItems({});
         navigate("/orders");
       } else {
+        toast.error(
+          "Something went wrong while placing order ! Please try again in few minutes."
+        );
         navigate("/cart");
       }
     } catch (error) {
