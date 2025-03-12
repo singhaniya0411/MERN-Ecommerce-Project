@@ -24,7 +24,7 @@
 
 ### **Payment Gateway**
 - Stripe
-- Razorpay
+- Razorpay (Wroking on it.)
 
 ---
 ## 📂 Folder Structure
@@ -111,8 +111,7 @@ Embusshh/
 
 ### 1️⃣ Clone the repository
 ```sh
-git clone https://github.com/your-username/embusshh.git
-cd embusshh
+git clone https://github.com/singhaniya0411/MERN-Ecommerce-Project.git
 ```
 
 ### 2️⃣ Install dependencies for frontend, backend, and admin panel
@@ -134,18 +133,18 @@ RAZORPAY_SECRET=your_razorpay_secret_key
 ```sh
 # Start backend
 cd backend
-npm start
+nodemon main.js
 
 # Start frontend
 cd ../frontend
-npm start
+npm run dev
 
 # Start admin panel
 cd ../admin-panel
-npm start
+npm run dev
 ```
 
-Your website will be available at **`http://localhost:3000/`**, and the admin panel at **`http://localhost:3001/`**.
+Your website will be available at **`http://localhost:5173/`**, and the admin panel at **`http://localhost:5174/`**.
 
 ---
 ## ✨ Features
@@ -182,8 +181,7 @@ To deploy the **Backend** on Render:
 git push origin main
 ```
 ---
-## 📜 License
-This project is licensed under the **MIT License**.
+
 
 ## 💡 Need Help?
 If you have any questions, feel free to open an issue. 🚀
